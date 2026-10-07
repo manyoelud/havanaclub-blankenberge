@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Havana Club — Beach club op de Zeedijk van Blankenberge</title>
+<meta name="description" content="Havana Club, beach club en brasserie in King Beach Village, Zeedijk 280 in Blankenberge. Ontbijt, lunch, diner, tapas en cocktails met zicht op zee.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Barlow+Condensed:ital,wght@0,600;0,700;1,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--mist:#F2EEE4;--kaart:#FAF8F2;--leisteen:#0F3A40;--oker:#E2553A;--oker-d:#BE4329;--oker-licht:#F6D2C8;--grijs:#5F6B6B;--lijn:#DED7C8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{overflow-x:hidden;max-width:100%}
+body{margin:0;background:var(--mist);color:var(--leisteen);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{display:block;max-width:100%}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.cond,h1,.h2,.koptekst h2,.gerecht h3,.grootwoord,.label b,.band,.twintig b,.score b{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-style:italic}
+.kop{position:fixed;top:0;left:0;right:0;z-index:30;transition:background .35s,box-shadow .35s}
+.kop.vast{background:color-mix(in srgb,var(--mist) 92%,transparent);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--lijn)}
+.kop .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+.logo{font-family:'Yellowtail',cursive;font-size:34px;text-decoration:none;line-height:1;color:var(--leisteen);white-space:nowrap}
+.menu{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px}
+.menu a{text-decoration:none;opacity:.85}.menu a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.rechts{display:flex;align-items:center;gap:14px}
+.talen{display:flex;gap:2px;font-size:13px;font-weight:600}
+.talen button{background:none;border:0;padding:6px 7px;border-radius:6px;cursor:pointer;color:var(--grijs);font:inherit}
+.talen button[aria-pressed="true"]{color:var(--leisteen);background:#fff}
+.knop{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;background:var(--oker);color:#fff;border:1px solid var(--oker);transition:background .2s}
+.knop:hover{background:var(--oker-d);border-color:var(--oker-d)}
+.knop.rand{background:transparent;color:var(--leisteen);border-color:var(--leisteen)}.knop.rand:hover{background:var(--leisteen);color:#fff}
+.knop.klein{padding:9px 16px;font-size:14px}
+@media(max-width:900px){.menu{display:none}}@media(max-width:560px){.kop .knop.klein{display:none}}
+.held{position:relative;min-height:100vh;padding:120px 0 60px;display:flex;align-items:center;overflow:hidden}
+.held .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;position:relative;z-index:2}
+.achter{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);font-family:'Yellowtail',cursive;font-size:clamp(160px,26vw,420px);color:#fff;opacity:.85;white-space:nowrap;line-height:1;pointer-events:none;z-index:1;clip-path:inset(0 100% 0 0);animation:schrijf 2.2s cubic-bezier(.6,.1,.2,1) .2s forwards}
+@keyframes schrijf{to{clip-path:inset(0 0 0 0)}}
+.sinds{font-size:15px;color:var(--grijs);margin:0 0 14px}
+.held h1{font-size:clamp(44px,6vw,84px);line-height:.95;margin:0;letter-spacing:-.01em}
+.held p.sub{font-size:19px;max-width:32ch;margin:22px 0 0;opacity:.85}
+.status{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:8px 14px 8px 11px;border-radius:999px;background:#fff;font-size:15px;color:#1e2328}
+.status i{width:9px;height:9px;border-radius:50%;background:#3faa63;box-shadow:0 0 0 4px rgba(63,170,99,.18)}
+.status.dicht i{background:#d1603d;box-shadow:0 0 0 4px rgba(209,96,61,.18)}
+.knoppen{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.pot{position:relative;justify-self:center;width:min(560px,100%)}
+.pot img{width:100%;height:auto;filter:drop-shadow(0 40px 40px rgba(20,25,30,.28));animation:landt 1.3s cubic-bezier(.2,.8,.2,1) .5s both;will-change:transform}
+@keyframes landt{from{opacity:0;transform:translateY(60px) rotate(-14deg) scale(.9)}to{opacity:1;transform:none}}
+.label{position:absolute;right:2%;bottom:4%;background:var(--leisteen);color:#fff;border-radius:14px;padding:12px 16px;font-size:14px;line-height:1.3;animation:landt 1s .9s both}
+.label b{display:block;font-size:22px}
+@media(max-width:860px){.held{padding-top:100px;min-height:auto}.held .wrap{grid-template-columns:1fr}.pot{width:min(420px,92%);margin-top:10px}.achter{top:62%}}
+.strook{background:var(--leisteen);color:#fff;overflow:hidden;padding:18px 0}
+.band{display:flex;gap:44px;width:max-content;animation:schuif 40s linear infinite;font-size:30px}
+.band span{display:flex;align-items:center;gap:44px;white-space:nowrap}.band i{width:10px;height:10px;border-radius:50%;background:var(--oker);display:inline-block}
+@keyframes schuif{to{transform:translateX(-50%)}}
+section{padding:110px 0}
+.kaartsectie{background:var(--kaart)}
+.koptekst{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:34px}
+.koptekst h2,.h2{font-size:clamp(44px,6vw,76px);line-height:.95;margin:0}
+.koptekst p{margin:0;color:var(--grijs);max-width:44ch}
+@media(max-width:820px){.koptekst{grid-template-columns:1fr;gap:12px}}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:80px;z-index:5;background:var(--kaart);padding:10px 0 14px}
+.tabs button{border:1px solid var(--lijn);background:#fff;border-radius:999px;padding:10px 18px;font:600 15px "Instrument Sans",sans-serif;cursor:pointer;color:var(--grijs)}
+.tabs button[aria-selected="true"]{background:var(--leisteen);border-color:var(--leisteen);color:#fff}
+.groep{display:none}.groep.aan{display:block}
+.grootwoord{font-size:clamp(64px,11vw,160px);line-height:.85;color:var(--oker-licht);margin:24px 0 10px}
+.gerechten{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:900px){.gerechten{grid-template-columns:1fr 1fr}}@media(max-width:560px){.gerechten{grid-template-columns:1fr}}
+.gerecht{background:#fff;border-radius:22px;padding:22px 24px 26px;opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s cubic-bezier(.2,.8,.2,1)}
+.groep.aan .gerecht{opacity:1;transform:none}.groep.aan .gerecht:nth-child(2){transition-delay:.08s}.groep.aan .gerecht:nth-child(3){transition-delay:.16s}
+.gerecht .beeld{height:230px;display:flex;align-items:center;justify-content:center;margin:-6px 0 8px}
+.gerecht .beeld img{max-height:100%;width:auto;filter:drop-shadow(0 18px 22px rgba(20,25,30,.22));transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.gerecht:hover .beeld img{transform:rotate(-6deg) scale(1.06)}
+.gerecht h3{font-size:30px;line-height:1;margin:0 0 8px}.gerecht p{margin:0;color:var(--grijs);font-size:16px}
+.noot{margin:34px 0 0;color:var(--grijs);font-size:15px}
+.terras{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff;padding:0;overflow:hidden;background:var(--leisteen)}
+.terras img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.terras::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,18,22,0) 30%,rgba(15,18,22,.82) 100%)}
+.terras .wrap{position:relative;z-index:2;padding:0 0 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.terras .h2{color:#fff}
+.feiten{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.feiten li{display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:16px}.feiten li strong{display:block}.feiten li span{color:rgba(255,255,255,.75)}
+.feiten svg{width:24px;height:24px;stroke:var(--oker);fill:none;stroke-width:1.7;margin-top:1px}
+@media(max-width:820px){.terras .wrap{grid-template-columns:1fr}}
+.verhaal .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.twintig{position:relative;line-height:.8}
+.twintig b{font-size:clamp(150px,22vw,300px);display:block}
+.twintig .eenheid{position:absolute;right:4%;bottom:-8%;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;font-size:clamp(34px,4.4vw,56px);color:var(--oker)}
+.verhaal p{font-size:18px;opacity:.85;max-width:46ch}
+.fotoduo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.fotoduo img{border-radius:16px;aspect-ratio:4/5;object-fit:cover;width:100%}.fotoduo img:last-child{margin-top:40px}
+@media(max-width:820px){.verhaal .wrap{grid-template-columns:1fr;gap:20px}}
+.reviews{background:var(--kaart)}
+.score{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:34px}
+.score b{font-size:96px;line-height:1}.sterren{color:var(--oker);font-size:26px;letter-spacing:3px}.score small{color:var(--grijs);font-size:16px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}@media(max-width:860px){.quotes{grid-template-columns:1fr}}
+blockquote{margin:0;background:#fff;border-radius:22px;padding:28px;font-size:17px;color:#1e2328}blockquote p{margin:0 0 14px}blockquote footer{color:#6b747b;font-size:14px}
+.praktisch .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px}@media(max-width:820px){.praktisch .wrap{grid-template-columns:1fr}}
+.uren{width:100%;border-collapse:collapse;font-size:17px;margin-top:26px}
+.uren td{padding:11px 0;border-bottom:1px solid var(--lijn)}.uren td:last-child{text-align:right}.uren tr.nu td{font-weight:600}.uren td.dicht{color:var(--grijs)}
+.adres{margin:26px 0 0;font-size:18px;line-height:1.7}.adres a{text-decoration:none;border-bottom:1px solid var(--oker)}
+.kaartbox{border-radius:22px;overflow:hidden;min-height:420px;background:#dfe5e8}.kaartbox iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+footer.voet{padding:40px 0;border-top:1px solid var(--lijn)}footer.voet .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--grijs);font-size:14px}
+.belbalk{display:none}
+@media(max-width:720px){.belbalk{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:40}.belbalk .knop{text-align:center;padding:14px 10px;box-shadow:0 10px 30px rgba(20,25,30,.25)}.belbalk .knop.rand{background:#fff;color:#1e2328}body{padding-bottom:84px}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--oker);outline-offset:3px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.achter{clip-path:none}.reveal,.gerecht{opacity:1;transform:none}}
+.pot img.foto{aspect-ratio:4/5;object-fit:cover;border-radius:28px;filter:none;box-shadow:0 40px 70px rgba(20,25,30,.28);transform-origin:center}
+.pot:has(img.foto) img{rotate:2deg}
+.gerecht .beeld img.foto{flex:1 1 100%;align-self:stretch;width:100%;max-width:none;height:100%;max-height:none;object-fit:cover;border-radius:14px;filter:none}
+.gerecht:hover .beeld img.foto{transform:scale(1.03)}
+
+</style>
+</head>
+<body>
+<header class="kop" id="kop"><div class="wrap">
+  <a class="logo" href="#top">Havana Club</a>
+  <ul class="menu"><li><a href="#kaart" data-t="nav_kaart">De kaart</a></li><li><a href="#terras" data-t="nav_terras">De zaak</a></li><li><a href="#verhaal" data-t="nav_verhaal">Ons verhaal</a></li><li><a href="#praktisch" data-t="nav_uren">Openingsuren</a></li></ul>
+  <div class="rechts"><div class="talen" role="group" aria-label="Taal"><button data-lang="nl">NL</button><button data-lang="fr">FR</button><button data-lang="en">EN</button><button data-lang="de">DE</button></div>
+  <a class="knop klein" href="tel:+32470518375" data-t="bel_kort">Bellen</a></div>
+</div></header>
+<main id="top">
+<section class="held">
+  <div class="achter" aria-hidden="true">Havana</div>
+  <div class="wrap">
+    <div>
+      <p class="sinds" data-t="sinds">Beach club en brasserie in King Beach Village, Blankenberge</p>
+      <h1 data-t="held_titel">Cocktails met je voeten in het zand.</h1>
+      <p class="sub" data-t="held_sub">Ontbijt, lunch, diner en tapas op een groot terras aan zee, met een afgesloten speeltuin voor de kinderen.</p>
+      <div class="status" id="status"><i></i><span>…</span></div>
+      <div class="knoppen"><a class="knop" href="tel:+32470518375" data-t="bel">Bel ons</a><a class="knop rand" href="#kaart" data-t="naar_kaart">Bekijk de kaart</a></div>
+    </div>
+    <div class="pot"><img id="pot" class="" src="img/held.webp" alt="Cocktail met munt en een kers"><div class="label"><b data-t="label_titel">Cocktail</b><span data-t="label_tekst">Met verse munt</span></div></div>
+  </div>
+</section>
+<div class="strook" aria-hidden="true"><div class="band" id="band"></div></div>
+<section class="kaartsectie" id="kaart"><div class="wrap">
+  <div class="koptekst reveal"><h2 data-t="kaart_titel">De kaart</h2><p data-t="kaart_intro">Belgische klassiekers, gerechten van de grill, zeevruchten en tapas om te delen. Ook veel gerechten en ijsjes voor de kinderen.</p></div>
+  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-groep="0" data-t="tab0">Eten</button><button role="tab" aria-selected="false" data-groep="1" data-t="tab1">Om te delen</button><button role="tab" aria-selected="false" data-groep="2" data-t="tab2">Drinken</button></div>
+  <div class="groep aan" id="g-0" role="tabpanel"><div class="grootwoord" data-t="tab0">Eten</div><div class="gerechten"><article class="gerecht"><div class="beeld"><img src="img/g0_0.jpg" class="foto" alt="" loading="lazy"></div><h3 data-t="g0_0">Mosselen</h3><p data-t="g0_0_t">Een pot mosselen met frietjes, zoals het hoort aan zee.</p></article><article class="gerecht"><div class="beeld"><img src="img/g0_1.webp" alt="" loading="lazy"></div><h3 data-t="g0_1">Spaghetti bolognese</h3><p data-t="g0_1_t">Een klassieker, ook voor de kinderen.</p></article><article class="gerecht"><div class="beeld"><img src="img/g0_2.jpg" class="foto" alt="" loading="lazy"></div><h3 data-t="g0_2">Steak met saus</h3><p data-t="g0_2_t">Van de grill, met frietjes en salade.</p></article></div></div>
+  <div class="groep" id="g-1" role="tabpanel"><div class="grootwoord" data-t="tab1">Om te delen</div><div class="gerechten"><article class="gerecht"><div class="beeld"><img src="img/g1_0.webp" alt="" loading="lazy"></div><h3 data-t="g1_0">Tapasplank</h3><p data-t="g1_0_t">Om samen van te nemen bij een drankje op het terras.</p></article></div></div>
+  <div class="groep" id="g-2" role="tabpanel"><div class="grootwoord" data-t="tab2">Drinken</div><div class="gerechten"><article class="gerecht"><div class="beeld"><img src="img/g2_0.jpg" class="foto" alt="" loading="lazy"></div><h3 data-t="g2_0">Sangria</h3><p data-t="g2_0_t">In een karaf, met een schijf watermeloen.</p></article><article class="gerecht"><div class="beeld"><img src="img/g2_1.jpg" class="foto" alt="" loading="lazy"></div><h3 data-t="g2_1">Cocktails</h3><p data-t="g2_1_t">Voor bij de zonsondergang.</p></article></div></div>
+  <p class="noot" data-t="noot">Ook ontbijt, pannenkoeken, wafels, desserts en suggesties van het seizoen.</p>
+</div></section>
+<section class="terras" id="terras"><img src="img/terras.jpg" alt="" loading="lazy">
+  <div class="wrap"><div class="reveal"><h2 class="h2" data-t="terras_titel">Op het strand, met zonsondergang</h2><p data-t="terras_tekst" style="max-width:44ch;font-size:18px;color:rgba(255,255,255,.85)">Een drankje na het strand, een salsa-avond of een zomerse avond met vrienden. Het terras ligt recht aan zee.</p></div>
+  <ul class="feiten reveal"><li><svg viewBox="0 0 24 24"><path d="M12 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM5 21v-4a7 7 0 0 1 14 0v4"/></svg><div><strong data-t="f0">Afgesloten speeltuin</strong><span data-t="f0_t">Met springkasteel, zodat de kinderen zonder zorgen spelen.</span></div></li><li><svg viewBox="0 0 24 24"><path d="M12 3c-3 4-5 6-5 9a5 5 0 0 0 10 0c0-3-2-5-5-9z"/></svg><div><strong data-t="f1">Groot terras aan zee</strong><span data-t="f1_t">Recht aan het strand van King Beach Village.</span></div></li><li><svg viewBox="0 0 24 24"><path d="M8 3h8l-1 9a3 3 0 0 1-6 0zM12 15v6M8 21h8"/></svg><div><strong data-t="f2">Van ontbijt tot cocktails</strong><span data-t="f2_t">Ontbijt, lunch, diner en een drankje bij zonsondergang.</span></div></li></ul></div>
+</section>
+<section class="verhaal" id="verhaal"><div class="wrap">
+  <div class="twintig reveal"><b id="getal">280</b><span class="eenheid" data-t="eenheid">Zeedijk</span></div>
+  <div class="reveal"><h2 class="h2" data-t="verhaal_titel">Een gezellige beach club</h2><p data-t="verhaal_tekst">Gezinnen komen voor de afgesloten speeltuin en het springkasteel, vrienden voor de cocktails en de salsa-avonden. Iedereen blijft voor de zonsondergang.</p>
+  <div class="fotoduo"><img src="img/verhaal1.jpg" alt="" loading="lazy"><img src="img/verhaal2.jpg" alt="" loading="lazy"></div></div>
+</div></section>
+<section class="reviews"><div class="wrap">
+  <div class="score reveal"><b>4,3</b><span class="sterren">★★★★☆</span><small data-t="reviews_onder">op Google, bij 563 beoordelingen</small></div>
+  <div class="quotes reveal"><blockquote><p>“Een verborgen parel aan de kust. Heerlijke mosselen gegeten, lekkere sangria en een toffe afgesloten speeltuin voor de kinderen”</p><footer>Lynn, Google</footer></blockquote><blockquote><p>“Lekker gegeten op een mooi terras. Vriendelijke en vlotte service en de kinderen konden zonder zorgen spelen op het grote, afgebakende speelplein en springkasteel!”</p><footer>Vanseveren, Google</footer></blockquote><blockquote><p>“Heerlijke strandtent, vlotte bediening, en altijd wat chips of nootjes bij je drankje.”</p><footer>Roy, Google</footer></blockquote></div>
+</div></section>
+<section class="praktisch" id="praktisch"><div class="wrap">
+  <div class="reveal"><h2 class="h2" data-t="uren_titel">Openingsuren</h2><table class="uren" id="uren"></table>
+  <p class="adres">Zeedijk 280, 8370 Blankenberge<br><a href="tel:+32470518375">+32 470 51 83 75</a><br><span data-t="uren_noot">Op donderdag gesloten. Salsa-avonden en zomerevents: vraag ernaar of bel ons.</span></p></div>
+  <div class="kaartbox"><iframe title="Havana Club" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Havana+Club%2C+Zeedijk+280%2C+8370+Blankenberge&amp;output=embed"></iframe></div>
+</div></section>
+</main>
+<footer class="voet"><div class="wrap"><span>© Havana Club, Blankenberge</span><span>Zeedijk 280 · +32 470 51 83 75</span></div></footer>
+<div class="belbalk"><a class="knop" href="tel:+32470518375" data-t="bel_kort">Bellen</a><a class="knop rand" href="https://www.google.com/maps/search/?api=1&amp;query=Havana+Club&amp;query_place_id=ChIJxd7QImOqxEcRSU39Ra1DS2k" data-t="route">Route</a></div>
+<script>
+var T = {"nl": {"g0_0": "Mosselen", "g0_0_t": "Een pot mosselen met frietjes, zoals het hoort aan zee.", "g0_1": "Spaghetti bolognese", "g0_1_t": "Een klassieker, ook voor de kinderen.", "g0_2": "Steak met saus", "g0_2_t": "Van de grill, met frietjes en salade.", "tab0": "Eten", "g1_0": "Tapasplank", "g1_0_t": "Om samen van te nemen bij een drankje op het terras.", "tab1": "Om te delen", "g2_0": "Sangria", "g2_0_t": "In een karaf, met een schijf watermeloen.", "g2_1": "Cocktails", "g2_1_t": "Voor bij de zonsondergang.", "tab2": "Drinken", "f0": "Afgesloten speeltuin", "f0_t": "Met springkasteel, zodat de kinderen zonder zorgen spelen.", "f1": "Groot terras aan zee", "f1_t": "Recht aan het strand van King Beach Village.", "f2": "Van ontbijt tot cocktails", "f2_t": "Ontbijt, lunch, diner en een drankje bij zonsondergang.", "nav_kaart": "De kaart", "nav_terras": "De zaak", "nav_verhaal": "Ons verhaal", "nav_uren": "Openingsuren", "bel_kort": "Bellen", "bel": "Bel ons", "naar_kaart": "Bekijk de kaart", "kaart_titel": "De kaart", "uren_titel": "Openingsuren", "route": "Route", "sinds": "Beach club en brasserie in King Beach Village, Blankenberge", "held_titel": "Cocktails met je voeten in het zand.", "held_sub": "Ontbijt, lunch, diner en tapas op een groot terras aan zee, met een afgesloten speeltuin voor de kinderen.", "label_titel": "Cocktail", "label_tekst": "Met verse munt", "kaart_intro": "Belgische klassiekers, gerechten van de grill, zeevruchten en tapas om te delen. Ook veel gerechten en ijsjes voor de kinderen.", "noot": "Ook ontbijt, pannenkoeken, wafels, desserts en suggesties van het seizoen.", "terras_titel": "Op het strand, met zonsondergang", "terras_tekst": "Een drankje na het strand, een salsa-avond of een zomerse avond met vrienden. Het terras ligt recht aan zee.", "verhaal_titel": "Een gezellige beach club", "verhaal_tekst": "Gezinnen komen voor de afgesloten speeltuin en het springkasteel, vrienden voor de cocktails en de salsa-avonden. Iedereen blijft voor de zonsondergang.", "eenheid": "Zeedijk", "reviews_onder": "op Google, bij 563 beoordelingen", "uren_noot": "Op donderdag gesloten. Salsa-avonden en zomerevents: vraag ernaar of bel ons.", "dagen": ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"], "gesloten": "Gesloten", "nu_open": "Nu open · vandaag tot ", "open_vanaf": "Vandaag open vanaf ", "nu_dicht": "Nu gesloten · ", "morgen": "morgen", "vanaf": " open vanaf ", "band": ["Mosselen", "Spaghetti bolognese", "Steak met saus", "Tapasplank", "Sangria", "Cocktails"]}, "fr": {"g0_0": "Moules", "g0_0_t": "Une casserole de moules avec des frites, comme il se doit à la mer.", "g0_1": "Spaghetti bolognaise", "g0_1_t": "Un classique, aussi pour les enfants.", "g0_2": "Steak avec sauce", "g0_2_t": "Du grill, avec frites et salade.", "tab0": "À manger", "g1_0": "Planche de tapas", "g1_0_t": "À partager autour d’un verre en terrasse.", "tab1": "À partager", "g2_0": "Sangria", "g2_0_t": "En carafe, avec une tranche de pastèque.", "g2_1": "Cocktails", "g2_1_t": "Pour le coucher de soleil.", "tab2": "À boire", "f0": "Aire de jeux fermée", "f0_t": "Avec château gonflable, les enfants jouent en toute sécurité.", "f1": "Grande terrasse face à la mer", "f1_t": "Directement sur la plage de King Beach Village.", "f2": "Du petit-déjeuner aux cocktails", "f2_t": "Petit-déjeuner, déjeuner, dîner et un verre au coucher du soleil.", "nav_kaart": "La carte", "nav_terras": "Le lieu", "nav_verhaal": "Notre histoire", "nav_uren": "Horaires", "bel_kort": "Appeler", "bel": "Appelez-nous", "naar_kaart": "Voir la carte", "kaart_titel": "La carte", "uren_titel": "Horaires", "route": "Itinéraire", "sinds": "Beach club et brasserie à King Beach Village, Blankenberge", "held_titel": "Des cocktails, les pieds dans le sable.", "held_sub": "Petit-déjeuner, déjeuner, dîner et tapas sur une grande terrasse face à la mer, avec une aire de jeux fermée pour les enfants.", "label_titel": "Cocktail", "label_tekst": "À la menthe fraîche", "kaart_intro": "Classiques belges, grillades, fruits de mer et tapas à partager. Aussi beaucoup de plats et de glaces pour les enfants.", "noot": "Aussi petit-déjeuner, crêpes, gaufres, desserts et suggestions de saison.", "terras_titel": "Sur la plage, au coucher du soleil", "terras_tekst": "Un verre après la plage, une soirée salsa ou une soirée d’été entre amis. La terrasse donne directement sur la mer.", "verhaal_titel": "Un beach club convivial", "verhaal_tekst": "Les familles viennent pour l’aire de jeux fermée et le château gonflable, les amis pour les cocktails et les soirées salsa. Tout le monde reste pour le coucher du soleil.", "eenheid": "Zeedijk", "reviews_onder": "sur Google, 563 avis", "uren_noot": "Fermé le jeudi. Soirées salsa et événements d’été : renseignez-vous ou appelez-nous.", "dagen": ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"], "gesloten": "Fermé", "nu_open": "Ouvert · aujourd’hui jusqu’à ", "open_vanaf": "Ouvert aujourd’hui dès ", "nu_dicht": "Fermé · ", "morgen": "demain", "vanaf": " ouvert dès ", "band": ["Moules", "Spaghetti bolognaise", "Steak avec sauce", "Planche de tapas", "Sangria", "Cocktails"]}, "en": {"g0_0": "Mussels", "g0_0_t": "A pot of mussels with fries, the way it should be by the sea.", "g0_1": "Spaghetti bolognese", "g0_1_t": "A classic, for the kids too.", "g0_2": "Steak with sauce", "g0_2_t": "From the grill, with fries and salad.", "tab0": "Food", "g1_0": "Tapas platter", "g1_0_t": "To share over a drink on the terrace.", "tab1": "To share", "g2_0": "Sangria", "g2_0_t": "In a carafe, with a slice of watermelon.", "g2_1": "Cocktails", "g2_1_t": "For the sunset.", "tab2": "Drinks", "f0": "Fenced playground", "f0_t": "With a bouncy castle, so the kids can play safely.", "f1": "Big terrace by the sea", "f1_t": "Right on the beach at King Beach Village.", "f2": "From breakfast to cocktails", "f2_t": "Breakfast, lunch, dinner and a drink at sunset.", "nav_kaart": "Menu", "nav_terras": "The place", "nav_verhaal": "Our story", "nav_uren": "Opening hours", "bel_kort": "Call us", "bel": "Call us", "naar_kaart": "See the menu", "kaart_titel": "The menu", "uren_titel": "Opening hours", "route": "Directions", "sinds": "Beach club and brasserie at King Beach Village, Blankenberge", "held_titel": "Cocktails with your feet in the sand.", "held_sub": "Breakfast, lunch, dinner and tapas on a big terrace by the sea, with a fenced playground for the kids.", "label_titel": "Cocktail", "label_tekst": "With fresh mint", "kaart_intro": "Belgian classics, grilled dishes, seafood and tapas to share. Plenty of dishes and ice creams for the kids too.", "noot": "Also breakfast, pancakes, waffles, desserts and seasonal specials.", "terras_titel": "On the beach, at sunset", "terras_tekst": "A drink after the beach, a salsa night or a summer evening with friends. The terrace is right on the sea.", "verhaal_titel": "A friendly beach club", "verhaal_tekst": "Families come for the fenced playground and the bouncy castle, friends for the cocktails and salsa nights. Everyone stays for the sunset.", "eenheid": "Zeedijk", "reviews_onder": "on Google, from 563 reviews", "uren_noot": "Closed on Thursdays. Salsa nights and summer events: ask us or give us a call.", "dagen": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "gesloten": "Closed", "nu_open": "Open now · today until ", "open_vanaf": "Opens today at ", "nu_dicht": "Closed now · ", "morgen": "tomorrow", "vanaf": " opens at ", "band": ["Mussels", "Spaghetti bolognese", "Steak with sauce", "Tapas platter", "Sangria", "Cocktails"]}, "de": {"g0_0": "Muscheln", "g0_0_t": "Ein Topf Muscheln mit Pommes, wie es sich am Meer gehört.", "g0_1": "Spaghetti Bolognese", "g0_1_t": "Ein Klassiker, auch für die Kinder.", "g0_2": "Steak mit Soße", "g0_2_t": "Vom Grill, mit Pommes und Salat.", "tab0": "Essen", "g1_0": "Tapas-Platte", "g1_0_t": "Zum Teilen bei einem Drink auf der Terrasse.", "tab1": "Zum Teilen", "g2_0": "Sangria", "g2_0_t": "In der Karaffe, mit einer Scheibe Wassermelone.", "g2_1": "Cocktails", "g2_1_t": "Zum Sonnenuntergang.", "tab2": "Getränke", "f0": "Eingezäunter Spielplatz", "f0_t": "Mit Hüpfburg, damit die Kinder sorglos spielen.", "f1": "Große Terrasse am Meer", "f1_t": "Direkt am Strand von King Beach Village.", "f2": "Vom Frühstück bis zu Cocktails", "f2_t": "Frühstück, Mittag, Abendessen und ein Drink bei Sonnenuntergang.", "nav_kaart": "Die Karte", "nav_terras": "Das Lokal", "nav_verhaal": "Unsere Geschichte", "nav_uren": "Öffnungszeiten", "bel_kort": "Anrufen", "bel": "Rufen Sie uns an", "naar_kaart": "Zur Karte", "kaart_titel": "Die Karte", "uren_titel": "Öffnungszeiten", "route": "Route", "sinds": "Beach Club und Brasserie im King Beach Village, Blankenberge", "held_titel": "Cocktails mit den Füßen im Sand.", "held_sub": "Frühstück, Mittag, Abendessen und Tapas auf einer großen Terrasse am Meer, mit eingezäuntem Spielplatz für die Kinder.", "label_titel": "Cocktail", "label_tekst": "Mit frischer Minze", "kaart_intro": "Belgische Klassiker, Gegrilltes, Meeresfrüchte und Tapas zum Teilen. Auch viele Gerichte und Eis für die Kinder.", "noot": "Auch Frühstück, Pfannkuchen, Waffeln, Desserts und Saisonempfehlungen.", "terras_titel": "Am Strand, bei Sonnenuntergang", "terras_tekst": "Ein Drink nach dem Strand, ein Salsa-Abend oder ein Sommerabend mit Freunden. Die Terrasse liegt direkt am Meer.", "verhaal_titel": "Ein gemütlicher Beach Club", "verhaal_tekst": "Familien kommen wegen des eingezäunten Spielplatzes und der Hüpfburg, Freunde wegen der Cocktails und Salsa-Abende. Alle bleiben für den Sonnenuntergang.", "eenheid": "Zeedijk", "reviews_onder": "auf Google, aus 563 Bewertungen", "uren_noot": "Donnerstags geschlossen. Salsa-Abende und Sommerevents: fragen Sie uns oder rufen Sie an.", "dagen": ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"], "gesloten": "Geschlossen", "nu_open": "Jetzt geöffnet · heute bis ", "open_vanaf": "Heute geöffnet ab ", "nu_dicht": "Jetzt geschlossen · ", "morgen": "morgen", "vanaf": " geöffnet ab ", "band": ["Muscheln", "Spaghetti Bolognese", "Steak mit Soße", "Tapas-Platte", "Sangria", "Cocktails"]}};
+var UREN = {"1": ["10:30", "22:00"], "2": ["10:30", "22:00"], "3": ["10:30", "22:00"], "4": null, "5": ["10:30", "22:00"], "6": ["10:30", "22:00"], "0": ["10:30", "22:00"]};
+var getalDoel = 0;
+var taal = ""; try { taal = localStorage.getItem("taal_havanaclub") || ""; } catch(e) {}
+if (!T[taal]) { var n = (navigator.language || "nl").slice(0,2); taal = T[n] ? n : "nl"; }
+function min(s){ var p = s.split(":"); return +p[0]*60 + +p[1]; }
+function zet(l){
+  var t = T[l]; document.documentElement.lang = l;
+  document.querySelectorAll("[data-t]").forEach(function(el){ var k = el.getAttribute("data-t"); if (typeof t[k] === "string") el.textContent = t[k]; });
+  document.querySelectorAll(".talen button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+  var html = "", nu = new Date(), d = nu.getDay(), tm = nu.getHours()*60 + nu.getMinutes();
+  [1,2,3,4,5,6,0].forEach(function(i){ var u = UREN[i], dag = t.dagen[i]; dag = dag.charAt(0).toUpperCase() + dag.slice(1);
+    html += "<tr" + (i===d ? ' class="nu"' : "") + "><td>" + dag + "</td><td" + (u ? "" : ' class="dicht"') + ">" + (u ? u[0] + " – " + u[1] : t.gesloten) + "</td></tr>"; });
+  document.getElementById("uren").innerHTML = html;
+  var st = document.getElementById("status"), sp = st.querySelector("span"), u = UREN[d]; st.classList.remove("dicht");
+  if (u && tm >= min(u[0]) && tm < min(u[1])) sp.textContent = t.nu_open + u[1];
+  else { st.classList.add("dicht"); var v = (d+1)%7, k = 1; while (!UREN[v] && k < 7) { v = (v+1)%7; k++; }
+    sp.textContent = (u && tm < min(u[0])) ? t.open_vanaf + u[0] : (UREN[v] ? t.nu_dicht + (k===1 ? t.morgen : t.dagen[v]) + t.vanaf + UREN[v][0] : t.gesloten); }
+  var rij = t.band.map(function(g){ return "<span>" + g + "<i></i></span>"; }).join("");
+  document.getElementById("band").innerHTML = rij + rij;
+  try { localStorage.setItem("taal_havanaclub", l); } catch(e) {}
+}
+document.querySelectorAll(".talen button").forEach(function(b){ b.addEventListener("click", function(){ zet(b.dataset.lang); }); });
+zet(taal);
+document.querySelectorAll(".tabs button").forEach(function(b){ b.addEventListener("click", function(){
+  document.querySelectorAll(".tabs button").forEach(function(x){ x.setAttribute("aria-selected", x===b ? "true" : "false"); });
+  document.querySelectorAll(".groep").forEach(function(g){ g.classList.remove("aan"); });
+  var g = document.getElementById("g-" + b.dataset.groep); void g.offsetWidth; g.classList.add("aan"); }); });
+var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.15});
+document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+var kop = document.getElementById("kop"), pot = document.getElementById("pot"), achter = document.querySelector(".achter");
+function scroll(){ var y = window.scrollY; kop.classList.toggle("vast", y > 30);
+  if (!rm && y < window.innerHeight * 1.2) { pot.style.transform = "translateY(" + (y*0.18) + "px) rotate(" + (y*0.03) + "deg)"; achter.style.marginLeft = (-y*0.25) + "px"; } }
+window.addEventListener("scroll", scroll, {passive:true}); scroll();
+var gt = document.getElementById("getal"), geteld = false;
+if (getalDoel && !rm) new IntersectionObserver(function(es){ if (es[0].isIntersecting && !geteld) { geteld = true; var t0 = performance.now(), van = 0;
+  (function tik(nu){ var k = Math.min(1, (nu-t0)/1600), e = 1 - Math.pow(1-k, 3); gt.textContent = Math.round(van + e*(getalDoel-van)) + ""; if (k < 1) requestAnimationFrame(tik); })(t0); } }, {threshold:.5}).observe(gt);
+</script>
+</body>
+</html>
